@@ -1,0 +1,59 @@
+{
+  "name": "corex-store-interface",
+  "description": "Interfaz entre el UI de la tienda y la lógica de implementación",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "proxy": "https://www.corex.app/",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "query-string": "^6.8.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-relay": "file:./dist/react-relay/react-relay",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.1.1",
+    "relay-runtime": "file:./dist/react-relay/relay-runtime",
+    "usedevice": "^1.0.18"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "scripts": {
+    "schema": "graphql get-schema",
+    "start": "react-scripts start",
+    "build-examples": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build": "rimraf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
+    "relay": "relay-compiler --src ./src --schema ./schema.graphql --watch"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "babel-plugin-relay": "^5.0.0",
+    "babel-preset-react-app": "^9.0.1",
+    "graphql": "^14.4.2",
+    "relay-compiler": "file:./dist/react-relay/relay-compiler",
+    "rimraf": "^2.7.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
