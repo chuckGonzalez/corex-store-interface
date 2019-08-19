@@ -1,8 +1,10 @@
 import App from "./App";
-import React from "react";
+import Relay from "react-relay";
 import environment from "./environment";
 import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
+import React, { useState, useEffect } from "react";
+import generator from "corex-theme-generator/runtime";
 
 const history = createBrowserHistory();
 
@@ -37,14 +39,25 @@ const history = createBrowserHistory();
  * @param {Object} params.error Error will be defined if an error has occurred while fetching the graphql query.
  */
 
-function StoreInterface({ render, manifest }) {
+function StoreInterface({ styles, render, manifest }) {
+  const [css, setCss] = useState("");
+
+  useEffect(() => {
+    generator(styles)
+      .generate()
+      .then(css => setCss(css));
+  }, [styles]);
+
   if (manifest && manifest.store) {
     localStorage.corexStore = manifest.store;
 
     return (
-      <Router history={history}>
-        <App history={history} render={render} />
-      </Router>
+      <>
+        <style>{css}</style>
+        <Router history={history}>
+          <App history={history} render={render} />
+        </Router>
+      </>
     );
   } else
     throw new Error(
@@ -52,6 +65,6 @@ function StoreInterface({ render, manifest }) {
     );
 }
 
-export { environment };
+export { React, Relay, environment };
 
 export default StoreInterface;
