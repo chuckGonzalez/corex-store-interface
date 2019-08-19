@@ -1,7 +1,7 @@
 {
   "name": "corex-store-interface",
   "description": "Interfaz entre el UI de la tienda y la lógica de implementación",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "proxy": "https://www.corex.app/",
