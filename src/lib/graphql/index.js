@@ -1,7 +1,7 @@
 import CartFragment from "./Cart";
 import CartItemFragment from "./CartItem";
 import ContentFragment, {
-  refetchQuery as ContentRefetchFragmnet
+  refetchQuery as ContentRefetchFragment
 } from "./Content";
 import ItemFragment from "./Item";
 import MenuFragment from "./Menu";
@@ -13,7 +13,7 @@ export default {
   CartFragment,
   CartItemFragment,
   ContentFragment,
-  ContentRefetchFragmnet,
+  ContentRefetchFragment,
   ItemFragment,
   MenuFragment,
   PDPFragment,
