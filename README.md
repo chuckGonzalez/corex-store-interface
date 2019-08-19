@@ -1,15 +1,15 @@
-#StoreInterface Component
+# StoreInterface Component
 
 StoreInterface
 Interface between UI and implementation logic
 
-##Install
+## Install
 
 ```
 npm install corex-store-interface -S
 ```
 
-##Signature
+## Signature
 
 ```
 params - ReactComponent props
@@ -19,7 +19,7 @@ params.manifest - Manifest file that defines storefront configuration
 params.render - Function of type ({routeProps, device, data, error}) => React.Node. The output of this function will be rendered by the StoreInterface.
 ```
 
-##Usage
+## Usage
 
 ```
   <StoreInterface
@@ -31,7 +31,7 @@ params.render - Function of type ({routeProps, device, data, error}) => React.No
   />
 ```
 
-##StoreInterfaceRender
+## StoreInterfaceRender
 
 ```
 params - ReactComponent props
@@ -49,7 +49,7 @@ params.data - Object containing data obtained from the graphql query; the shape 
 params.error - Error will be defined if an error has occurred while fetching the graphql query.
 ```
 
-##Semantic colors
+## Semantic colors
 
 ````
 //Background
