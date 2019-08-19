@@ -31,6 +31,12 @@ params.render - Function of type ({routeProps, device, data, error}) => React.No
   />
 ```
 
+## Import values
+
+```
+import StoreInterface, { React, Relay, environment, graphqlArtifacts } from 'corex-store-interface';
+```
+
 ## StoreInterfaceRender
 
 ```
@@ -48,6 +54,20 @@ params.data - Object containing data obtained from the graphql query; the shape 
 
 params.error - Error will be defined if an error has occurred while fetching the graphql query.
 ```
+
+## Available query and fragments on graphqlArtifacts
+
+- CartFragment
+- CartItemFragment
+- ContentFragment
+- ContentRefetchFragmnet
+- ItemFragment
+- MenuFragment
+- PDPFragment
+- PDPRefetchFragment
+- PLPFragment
+- PLPRefetchFragment
+- StoreQuery
 
 ## Semantic colors
 

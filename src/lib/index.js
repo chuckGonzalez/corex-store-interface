@@ -1,6 +1,7 @@
 import App from "./App";
 import Relay from "react-relay";
 import environment from "./environment";
+import graphqlArtifacts from "./graphql";
 import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import React, { useState, useEffect } from "react";
@@ -65,6 +66,6 @@ function StoreInterface({ styles, render, manifest }) {
     );
 }
 
-export { React, Relay, environment };
+export { React, Relay, environment, graphqlArtifacts };
 
 export default StoreInterface;

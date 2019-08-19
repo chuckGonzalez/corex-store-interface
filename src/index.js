@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import StoreInterface, { environment } from "./lib";
+import StoreInterface, { environment, graphqlArtifacts } from "./lib";
 import styles from "./styles";
 import manifest from "./manifest.json";
 
@@ -16,7 +16,8 @@ const App = () => (
         device,
         data,
         error,
-        environment
+        environment,
+        graphqlArtifacts
       });
       return <div className="bg-red">Hello world!</div>;
     }}
